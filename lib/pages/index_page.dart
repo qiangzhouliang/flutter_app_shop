@@ -7,6 +7,7 @@ import 'member_page.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provide/provide.dart';
 import 'package:flutter_app_shop/provide/current_index.dart';
+import 'movie_page.dart';
 
 class IndexPage extends StatelessWidget {
   //底部tabbar内容
@@ -14,11 +15,12 @@ class IndexPage extends StatelessWidget {
     BottomNavigationBarItem(icon: Icon(CupertinoIcons.home),title: Text('首页')),
     BottomNavigationBarItem(icon: Icon(CupertinoIcons.search),title: Text('分类')),
     BottomNavigationBarItem(icon: Icon(CupertinoIcons.shopping_cart),title: Text('购物车')),
-    BottomNavigationBarItem(icon: Icon(CupertinoIcons.profile_circled),title: Text('会员中心'))
+    BottomNavigationBarItem(icon: Icon(CupertinoIcons.profile_circled),title: Text('会员中心')),
+    BottomNavigationBarItem(icon: Icon(CupertinoIcons.video_camera_solid),title: Text('视频'))
   ];
 
   //页面数组
-  final List<Widget> tabBodies = [HomePage(),CategoryPage(),CartPage(),MemberPage()];
+  final List<Widget> tabBodies = [HomePage(),CategoryPage(),CartPage(),MemberPage(),MoviePage()];
 
   @override
   Widget build(BuildContext context) {
